@@ -2,15 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 const missionsController = require('../controllers/missions');
-// const validation = require('../middleware/validation');
+const validation = require('../middleware/validate');
 
 router.get('/', missionsController.getAll);
 
 router.get('/:id', missionsController.getSingle);
 
-router.post('/', missionsController.createMission);
+router.post('/', validation.saveMission, missionsController.createMission);
 
-router.put('/:id', missionsController.updateMission);
+router.put('/:id', validation.saveMission, missionsController.updateMission);
 
 router.delete('/:id', missionsController.deleteMission);
 

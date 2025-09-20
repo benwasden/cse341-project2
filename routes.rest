@@ -1,0 +1,68 @@
+//LOCALHOST
+### Get all missions
+GET http://localhost:3000/missions
+
+### Get mission by id
+GET http://localhost:3000/missions/68cebe1277a52571206c699a
+
+### Add Contact
+POST http://localhost:3000/missions HTTP/1.1
+content-type: application/json
+
+{
+    "program": "Apollo",
+    "number": "17",
+    "launchDate": "12/07/1972",
+    "achievement": "Landing two people on the moon for the last time."
+}
+
+### Update Contact
+PUT http://localhost:3000/contacts/68c3709da0c96a9f25c0e865 HTTP/1.1
+content-type: application/json
+
+{
+    "program": "Apollo",
+    "number": "18",
+    "launchDate": "N/A",
+    "achievement": "Cancelled due to funding"
+}
+
+### Delete Contact
+DELETE http://localhost:3000/contacts/68c371d3535255a7adbf2f90 HTTP/1.1
+
+
+# -----------------------------
+
+
+//Production
+### Get all users
+GET https://https://cse341-project2-gf3l.onrender.com/missions
+
+### Get contact by id
+GET https://https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a
+
+### Add Contact
+POST https://https://cse341-project2-gf3l.onrender.com/missions HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Joseph",
+    "lastName":"Smith",
+    "email":"jsmith@lds.org",
+    "favoriteColor":"Orange",
+    "birthday":"12/23/1805"
+}
+
+### Update Contact
+PUT https://https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a HTTP/1.1
+content-type: application/json
+
+{
+    "program": "Apollo",
+    "number": "18",
+    "launchDate": "N/A",
+    "achievement": "Cancelled due to funding"
+}
+
+### Delete Contact
+DELETE https://https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a HTTP/1.1

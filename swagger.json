@@ -30,7 +30,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "",
+        "description": "See all spaceflight missions in the database.",
         "produces": [
           "application/json"
         ],
@@ -47,7 +47,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "",
+        "description": "Add a mission to the database.",
         "parameters": [
           {
             "name": "body",
@@ -86,7 +86,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "",
+        "description": "View a specific mission by the given ID.",
         "produces": [
           "application/json"
         ],
@@ -111,7 +111,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "",
+        "description": "Update a mission's details by the given ID.",
         "parameters": [
           {
             "name": "id",
@@ -157,7 +157,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "",
+        "description": "Delete a mission from the database.",
         "parameters": [
           {
             "name": "id",
