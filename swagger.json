@@ -5,7 +5,7 @@
     "description": "Ben Wasden Week 3/4 NASA Spaceflight Missions API",
     "version": "1.0.0"
   },
-  "host": "https://cse341-project2-gf3l.onrender.com",
+  "host": "cse341-project2-gf3l.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
