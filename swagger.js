@@ -6,7 +6,7 @@ const doc = {
         description: 'Ben Wasden Week 3/4 NASA Spaceflight Missions API'
     },
     host: 'localhost:3000',
-    schemes: ['https', 'http']
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';
