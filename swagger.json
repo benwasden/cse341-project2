@@ -29,7 +29,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "See all spaceflight missions in the database.",
+        "description": "Get all NASA missions from the database.",
         "produces": [
           "application/json"
         ],
@@ -46,7 +46,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "Add a mission to the database.",
+        "description": "Upload a new NASA mission to the database",
         "parameters": [
           {
             "name": "body",
@@ -74,6 +74,9 @@
           "204": {
             "description": "No Content"
           },
+          "412": {
+            "description": "Precondition Failed"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -85,7 +88,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "View a specific mission by the given ID.",
+        "description": "Get a specific NASA mission from the database.",
         "produces": [
           "application/json"
         ],
@@ -110,7 +113,7 @@
         "tags": [
           "Missions"
         ],
-        "description": "Update a mission's details by the given ID.",
+        "description": "Update a NASA mission from the database.",
         "parameters": [
           {
             "name": "id",
@@ -147,6 +150,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "412": {
+            "description": "Precondition Failed"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -156,7 +162,167 @@
         "tags": [
           "Missions"
         ],
-        "description": "Delete a mission from the database.",
+        "description": "Delete a mission from the NASA database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/smissions/": {
+      "get": {
+        "tags": [
+          "Missions"
+        ],
+        "description": "Get all Soviet missions from the database.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Missions"
+        ],
+        "description": "Upload a new Soviet mission to the database.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "program": {
+                  "example": "any"
+                },
+                "number": {
+                  "example": "any"
+                },
+                "launchDate": {
+                  "example": "any"
+                },
+                "achievement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/smissions/{id}": {
+      "get": {
+        "tags": [
+          "Missions"
+        ],
+        "description": "Get a specific Soviet mission from the database by its ID.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Missions"
+        ],
+        "description": "Update a Soviet mission from the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "program": {
+                  "example": "any"
+                },
+                "number": {
+                  "example": "any"
+                },
+                "launchDate": {
+                  "example": "any"
+                },
+                "achievement": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Missions"
+        ],
+        "description": "Delete a mission from the Soviet database.",
         "parameters": [
           {
             "name": "id",

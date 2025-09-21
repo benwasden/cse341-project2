@@ -17,7 +17,7 @@ content-type: application/json
 }
 
 ### Update Contact
-PUT http://localhost:3000/contacts/68c3709da0c96a9f25c0e865 HTTP/1.1
+PUT http://localhost:3000/missions/68c3709da0c96a9f25c0e865 HTTP/1.1
 content-type: application/json
 
 {
@@ -28,21 +28,57 @@ content-type: application/json
 }
 
 ### Delete Contact
-DELETE http://localhost:3000/contacts/68c371d3535255a7adbf2f90 HTTP/1.1
+DELETE http://localhost:3000/missions/68c371d3535255a7adbf2f90 HTTP/1.1
+
+
+
+
+//Soviet Missions
+//LOCALHOST
+### Get all missions
+GET http://localhost:3000/smissions
+
+### Get mission by id
+GET http://localhost:3000/smissions/68cf59b0922415cec023d046
+
+### Add Contact
+POST http://localhost:3000/smissions HTTP/1.1
+content-type: application/json
+
+{
+    "program": "Test",
+    "number": "2",
+    "launchDate": "12/07/1971",
+    "achievement": "Testing Soviet Update"
+}
+
+### Update Contact
+PUT http://localhost:3000/smissions/68c3709da0c96a9f25c0e865 HTTP/1.1
+content-type: application/json
+
+{
+    "program": "Soyuz",
+    "number": "100",
+    "launchDate": "N/A",
+    "achievement": "Cancelled due to funding"
+}
+
+### Delete Contact
+DELETE http://localhost:3000/smissions/68c371d3535255a7adbf2f90 HTTP/1.1
 
 
 # -----------------------------
 
 
 //Production
-### Get all users
-GET https://https://cse341-project2-gf3l.onrender.com/missions
+### Get all missions
+GET https://cse341-project2-gf3l.onrender.com/missions
 
-### Get contact by id
-GET https://https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a
+### Get mission by id
+GET https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a
 
-### Add Contact
-POST https://https://cse341-project2-gf3l.onrender.com/missions HTTP/1.1
+### Add Mission
+POST https://cse341-project2-gf3l.onrender.com/missions HTTP/1.1
 content-type: application/json
 
 {
@@ -53,8 +89,8 @@ content-type: application/json
     "birthday":"12/23/1805"
 }
 
-### Update Contact
-PUT https://https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a HTTP/1.1
+### Update Mission
+PUT https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a HTTP/1.1
 content-type: application/json
 
 {
@@ -64,5 +100,38 @@ content-type: application/json
     "achievement": "Cancelled due to funding"
 }
 
-### Delete Contact
-DELETE https://https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a HTTP/1.1
+### Delete Mission
+DELETE https://cse341-project2-gf3l.onrender.com/missions/68cebe1277a52571206c699a HTTP/1.1
+
+
+//Soviet missions
+### Get all soviet missions
+GET https://cse341-project2-gf3l.onrender.com/smissions
+
+### Get soviet mission by id
+GET https://cse341-project2-gf3l.onrender.com/smissions/68cf59b0922415cec023d046
+
+### Add mission to soviet cluster
+POST https://cse341-project2-gf3l.onrender.com/smissions HTTP/1.1
+content-type: application/json
+
+{
+    "program": "Test",
+    "number": "2",
+    "launchDate": "12/07/1971",
+    "achievement": "Testing Soviet Update"
+}
+
+### Update mission
+PUT https://cse341-project2-gf3l.onrender.com/smissions/68c3709da0c96a9f25c0e865 HTTP/1.1
+content-type: application/json
+
+{
+    "program": "Soyuz",
+    "number": "100",
+    "launchDate": "N/A",
+    "achievement": "Cancelled due to funding"
+}
+
+### Delete mission
+DELETE https://cse341-project2-gf3l.onrender.com/smissions/68c371d3535255a7adbf2f90 HTTP/1.1

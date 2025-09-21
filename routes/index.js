@@ -9,4 +9,6 @@ router.get('/', (req, res) => {
 
 router.use('/missions', require('./missions'));
 
+router.use('/smissions', require('./smissions'));
+
 module.exports = router;
