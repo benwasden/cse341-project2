@@ -5,7 +5,7 @@ const doc = {
         title: 'Missions Api',
         description: 'Ben Wasden Week 3/4 NASA Spaceflight Missions API'
     },
-    host: 'localhost:3000',
+    host: 'cse341-project2-gf3l.onrender.com',
     schemes: ['https']
 };
 
