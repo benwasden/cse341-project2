@@ -9,9 +9,9 @@ router.get('/', missionsController.getAll);
 
 router.get('/:id', missionsController.getSingle);
 
-router.post('/', isAuthenticated, validation.saveMission, missionsController.createMission);
+router.post('/', isAuthenticated, validation.saveSMission, missionsController.createMission);
 
-router.put('/:id', isAuthenticated, validation.saveMission, missionsController.updateMission);
+router.put('/:id', isAuthenticated, validation.saveSMission, missionsController.updateMission);
 
 router.delete('/:id', isAuthenticated, missionsController.deleteMission);
 
