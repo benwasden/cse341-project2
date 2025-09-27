@@ -3,15 +3,16 @@ const router = express.Router();
 
 const missionsController = require('../controllers/missions');
 const validation = require('../middleware/validate');
+const { isAuthenticated } = require("../middleware/authenticate");
 
 router.get('/', missionsController.getAll);
 
 router.get('/:id', missionsController.getSingle);
 
-router.post('/', validation.saveMission, missionsController.createMission);
+router.post('/', isAuthenticated, validation.saveMission, missionsController.createMission);
 
-router.put('/:id', validation.saveMission, missionsController.updateMission);
+router.put('/:id', isAuthenticated, validation.saveMission, missionsController.updateMission);
 
-router.delete('/:id', missionsController.deleteMission);
+router.delete('/:id', isAuthenticated, missionsController.deleteMission);
 
 module.exports = router;
